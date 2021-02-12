@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1><u>{{object.title}}</u></h1>
+<h3>{{object.description}}</h3>
+<p><a href="{% url 'book-edit' object.id %}">Edit</a> | <a href="{% url 'book-delete' object.id %}">Delete</a></p>
+
+{% endblock %}
