@@ -5,28 +5,28 @@ from django.urls import reverse_lazy
 
 class BooklistView(ListView):
     model = Book
-    template_name = 'bookList.html'
+    template_name = 'books/bookList.html'
 
 
 class BookdetailView(DetailView):
     model = Book
-    template_name = 'bookDetail.html'
+    template_name = 'books/bookDetail.html'
 
 
 class BookcreateView(CreateView):
     model = Book
-    template_name = 'bookCreate.html'
+    template_name = 'books/bookCreate.html'
     fields = '__all__'
 
 
 class BookeditView(UpdateView):
     model = Book
-    template_name = 'bookEdit.html'
+    template_name = 'books/bookEdit.html'
     fields = '__all__'
 
 
 class BookdeleteView(DeleteView):
     model = Book
-    template_name = 'bookDelete.html'
+    template_name = 'books/bookDelete.html'
     fields = '__all__'
     success_url = reverse_lazy('book-list')

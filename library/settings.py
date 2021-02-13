@@ -60,7 +60,7 @@ ROOT_URLCONF = 'library.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/books'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,3 +134,7 @@ import dj_database_url
 
 db_from_env = dj_database_url.config()
 DATABASES["default"].update(db_from_env)
+
+
+LOGIN_REDIRECT_URL = 'book-list'
+LOGOUT_REDIRECT_URL = 'book-list'

@@ -1,9 +1,19 @@
-{% extends 'base.html' %}
+{% extends 'books/base.html' %}
 
 {% block content %}
 <form action="" method="POST">
     {% csrf_token %}
-    {{form.as_p}}
+
+    <table>
+        <tr>
+            <th>{{form.title.label_tag}}</th><td>{{form.title}}</td>
+        </tr>
+        <tr>
+            <th>{{form.description.label_tag}}</th><td>{{form.description}}</td>
+        </tr>
+    </table>
+    
+    
     <input type="submit" value="Update">
 </form>
 {% endblock %}
