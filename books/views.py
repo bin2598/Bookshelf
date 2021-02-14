@@ -3,6 +3,8 @@ from django.views.generic import ListView,DetailView,CreateView,UpdateView,Delet
 from .models import Book
 from django.urls import reverse_lazy
 
+from .forms import BookUserCreationForm
+
 class BooklistView(ListView):
     model = Book
     template_name = 'books/bookList.html'
@@ -30,3 +32,10 @@ class BookdeleteView(DeleteView):
     template_name = 'books/bookDelete.html'
     fields = '__all__'
     success_url = reverse_lazy('book-list')
+
+
+class SignupView(CreateView):
+    form_class = BookUserCreationForm
+    success_url = reverse_lazy('book-list')
+    template_name = 'registration/signup.html'
+    

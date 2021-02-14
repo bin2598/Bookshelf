@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'books.apps.BooksConfig'
 ]
 
+AUTH_USER_MODEL = 'books.BookUser'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

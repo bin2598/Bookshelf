@@ -1,0 +1,21 @@
+<h1>Book Shelf</h1><hr>
+
+
+<h3>SignUp</h3>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <table>
+        {% for i in form %}
+        <tr>
+            <td>{{i.label_tag}} </td><th>{{i}}</th>
+        </tr>
+        {% endfor %}
+        
+        <tr>
+            <td colspan="2"><button type="submit">Register</button></td>
+        </tr>
+    </table>
+    
+</form>

@@ -14,7 +14,7 @@
     
         {% else %}
         <a href="{% url 'login' %}">login</a>
-        <a href="">SignUp</a>
+        <a href="{% url 'signup' %}">SignUp</a>
         {% endif %}
 
         {% block content %}
