@@ -1,19 +1,28 @@
 {% extends 'books/base.html' %}
 
+{% load crispy_forms_tags %}
 {% block content %}
+<div class="container col-sm-6 jumbotron">
+    <h3 class="text-center text-secondary">Update Book</h3>
 <form action="" method="POST">
     {% csrf_token %}
 
-    <table>
+    {{form|crispy}}
+    
+    
+    <input type="submit" value="Update" class="btn btn-info">
+</form>
+{% endblock %}
+
+
+
+
+
+<!-- <table>
         <tr>
-            <th>{{form.title.label_tag}}</th><td>{{form.title}}</td>
+            <th>{{form.title.label_tag}}</th><td>{{form}}</td>
         </tr>
         <tr>
             <th>{{form.description.label_tag}}</th><td>{{form.description}}</td>
         </tr>
-    </table>
-    
-    
-    <input type="submit" value="Update">
-</form>
-{% endblock %}
+    </table> -->

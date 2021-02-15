@@ -2,11 +2,14 @@
 
 {% block content %}
 
+<div class="container col-md-6">
+    
 <h2>Delete Book</h2>
 <p>Are you sure too delete "{{book.title}}" ?</p>
 <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Confirm">
+    <input type="submit" value="Confirm" class="btn btn-danger">
 </form>
 
+</div>
 {% endblock %}

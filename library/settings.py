@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
 
+    'crispy_forms',
+
     # app
     'books.apps.BooksConfig'
 ]
@@ -140,3 +142,5 @@ DATABASES["default"].update(db_from_env)
 
 LOGIN_REDIRECT_URL = 'book-list'
 LOGOUT_REDIRECT_URL = 'book-list'
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

@@ -2,10 +2,16 @@
 
 {% block content %}
 
-<form action="" method="POST">
+{% load crispy_forms_tags %}
+
+<div class="container bg-dark p-5 mt-5">
+    <h3 class="text-secondary text-center">Add New Book</h3>
+
+<form action="" method="POST" class="container col-md-6 text-light">
     {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Add">
+    {{form | crispy}}
+    <input type="submit" value="Create" class="btn btn-md btn-secondary">
 </form>
 
+</div>
 {% endblock %}

@@ -2,11 +2,14 @@
 
 {% block content %}
 
+<div class="container col-md-8 bg-dark text-light mt-5 p-5">
+
 <h1><u>{{object.title}}</u></h1>
 <h3>{{object.description}}</h3>
 
 {% if user.is_authenticated %}
-<p><a href="{% url 'book-edit' object.id %}">Edit</a> | <a href="{% url 'book-delete' object.id %}">Delete</a></p>
+<p><a href="{% url 'book-edit' object.id %}" class="btn btn-success">Edit</a>
+   <a href="{% url 'book-delete' object.id %}" class="btn btn-secondary">Delete</a></p>
 {% endif %}
 
 {% endblock %}
