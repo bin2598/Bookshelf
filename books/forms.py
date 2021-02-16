@@ -4,7 +4,7 @@ from .models import BookUser
 
 class BookUserCreationForm(UserCreationForm):
 
-    class Meta(UserCreationForm.Meta):
+    class Meta(UserCreationForm):
         model = BookUser
         # fields = UserCreationForm.Meta.fields + ('first_name', 'phone_no',)
         fields = ['first_name', 'phone_no', 'username',]

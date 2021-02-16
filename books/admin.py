@@ -10,6 +10,5 @@ class BookUserAdmin(UserAdmin):
     model = BookUser
     list_display = ['email', 'is_staff', 'first_name']
 
-
-admin.site.register(Book)
 admin.site.register(BookUser, BookUserAdmin)
+admin.site.register(Book)
