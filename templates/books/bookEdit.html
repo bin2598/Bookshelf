@@ -4,13 +4,13 @@
 {% block content %}
 <div class="container col-sm-6 jumbotron">
     <h3 class="text-center text-secondary">Update Book</h3>
-<form action="" method="POST">
+<form action="" method="POST" class="container col-md-8">
     {% csrf_token %}
 
     {{form|crispy}}
     
     
-    <input type="submit" value="Update" class="btn btn-info">
+    <input type="submit" value="Update" class="btn btn-outline-info">
 </form>
 {% endblock %}
 

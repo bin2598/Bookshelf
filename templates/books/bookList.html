@@ -1,16 +1,23 @@
+<style>
+    ul a .list-group-item{
+        text-decoration: none;
+    }
+</style>
+
 {% extends 'books/base.html' %}
 
 
 {% block content %}
+
 <hr>
 {% if user.is_authenticated %}
 <a href="{% url 'book-create' %}" class="btn btn-secondary justify-content-center"> + Add new Book</a>
 {% endif %}
 
 <h3 class="text-center">Books</h3>
-<ul class="list-group container col-sm-6">
+<ul class="list-group container col-sm-6 p-2">
     {% for book in object_list %}
-    <li class="list-group-item bg-secondary"><a href="{% url 'book-detail' book.id %}" class="text-light">{{book.title}}</a></li>
+    <a href="{% url 'book-detail' book.id %}"><li class="list-group-item btn btn-outline-warning text-dark">{{book.title}}</li></a><br>
     {% endfor %}
 </ul>
 

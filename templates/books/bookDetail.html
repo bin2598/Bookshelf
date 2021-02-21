@@ -8,8 +8,8 @@
 <h3>{{object.description}}</h3>
 
 {% if user.is_authenticated %}
-<p><a href="{% url 'book-edit' object.id %}" class="btn btn-success">Edit</a>
-   <a href="{% url 'book-delete' object.id %}" class="btn btn-secondary">Delete</a></p>
+<p><a href="{% url 'book-edit' object.id %}" class="btn btn-outline-success">Edit</a>
+   <a href="{% url 'book-delete' object.id %}" class="btn btn-outline-secondary">Delete</a></p>
 {% endif %}
 
 {% endblock %}

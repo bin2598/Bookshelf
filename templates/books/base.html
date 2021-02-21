@@ -31,31 +31,28 @@
 
     </head>
     <body class="bg-light">
-    
-        <nav class="navbar navbar-expand-sm bg-dark">
-            <header>
-            <h1><a class="navbar-brand text-light"  href="{% url 'book-list' %}">Book Shelf</a></h1>
-            </header>
 
-            <ul class="navbar-nav">
-                {% if user.is_authenticated %}
-                <li class="nav-right dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"  id="navbardrop">Hi {{user.username}}</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item"  href="{% url 'logout' %}">Logout</a>
-                        </div>
-                </li>
-    
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'signup' %}">SignUp</a>
-                </li>
-                {% endif %}
-            </ul>
-        </nav>
+
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom shadow-sm">
+
+            <a href="{% url 'book-list' %}" class="navbar-brand my-0 mr-md-auto font-weight-normal text-light">Book Shelf</a>
+            
+            <nav class="my-2 my-md-0 mr-md-3">
+              {% if user.is_authenticated %}
+            
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"  id="navbardrop">Hi {{user.username}}</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item"  href="{% url 'account_logout' %}">Logout</a>
+                </div>
+              
+
+              {% else %}
+                <a class="p-2 text-light" href="{% url 'account_login' %}">Log In</a>
+                <a class="btn btn-outline-primary text-light" href="{% url 'account_signup' %}">Sign Up</a>
+              {% endif %}
+            </nav>
+      
+          </div>
         
         
         {% block content %}
