@@ -1,3 +1,6 @@
+
+{% load socialaccount %}
+
 <html>
     <head>
 
@@ -27,8 +30,10 @@
         <form method="POST" class="container col-sm-6">
             {% csrf_token %}
             {{form|crispy}}
-            <input type="submit" value="Login" class="btn btn-success">
+            <input type="submit" value="Login" class="btn btn-success"><hr>
+            <p class="btn btn-light"><a href="{% provider_login_url 'google'%}" class="text-success">Login with google</a></p>
         </form>
+        
         </div>
         {% endblock %}
 

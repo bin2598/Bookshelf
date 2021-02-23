@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 
     # app
     'books.apps.BooksConfig',
@@ -160,7 +162,7 @@ db_from_env = dj_database_url.config()
 DATABASES["default"].update(db_from_env)
 
 
-LOGIN_REDIRECT_URL = 'book-list'
-LOGOUT_REDIRECT_URL = 'book-list'
+# LOGIN_REDIRECT_URL = 'book-list'
+# LOGOUT_REDIRECT_URL = 'book-list'
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"

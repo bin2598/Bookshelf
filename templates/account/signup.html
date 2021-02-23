@@ -1,3 +1,5 @@
+{% load socialaccount %}
+
 <html>
     <head>
 
@@ -30,6 +32,8 @@
         <p>{{form | crispy}}</p>
 
         <button type="submit" class="btn btn-success">Register</button>
+<br>
+        <p class="btn btn-light mt-3"><a href="{% provider_login_url 'google'%}" class="text-success">Signup with google</a></p>
         
         {% endblock%}
     </form>
