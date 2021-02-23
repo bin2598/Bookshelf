@@ -26,7 +26,7 @@ SECRET_KEY = 'qtk!psf8+)eymo28g+93!qssw==zyrip9twhu$^c-%l9i9w*sh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djlibraryapp.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['django-bookshelf-app.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
